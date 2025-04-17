@@ -27,12 +27,12 @@ resource "proxmox_virtual_environment_vm" "this" {
 
   initialization {
     dns {
-      servers = ["1.1.1.1"]
+      servers = var.dns
     }
     ip_config {
       ipv4 {
-        address = "10.0.1.10/24"
-        gateway = "10.0.1.1"
+        address = var.ip.address
+        gateway = var.ip.gateway
       }
     }
   }

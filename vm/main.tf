@@ -18,7 +18,11 @@ resource "proxmox_virtual_environment_vm" "this" {
     file_id      = "local:iso/${var.iso}"
     interface    = "scsi0"
     size = var.volume_size
+    aio = "native"
+    cache = "none"
+    iothread = true
   }
+  scsi_hardware = "virtio-scsi-single"
 
   initialization {
     dns {

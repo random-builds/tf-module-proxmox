@@ -26,3 +26,7 @@ variable "dns" {
   type = set(string)
   default = ["9.9.9.9", "1.1.1.1"]
 }
+variable "mac_address" {
+  type = string
+  default = null
+}

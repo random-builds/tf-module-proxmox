@@ -40,5 +40,7 @@ resource "proxmox_virtual_environment_vm" "this" {
     type = "l26"
   }
 
-  network_device {}
+  network_device {
+    mac_address = var.mac_address
+  }
 }

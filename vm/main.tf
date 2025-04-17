@@ -22,7 +22,6 @@ resource "proxmox_virtual_environment_vm" "this" {
     file_id      = "local:iso/${var.iso}"
     interface    = "scsi0"
     size = var.volume_size
-    type = "virtio"
   }
 
   initialization {

@@ -19,7 +19,7 @@ variable "volume_size" {
 variable "ip" {
   type = object({
     address = string
-    gateway = string
+    gateway = optional(string)
   })
 }
 variable "dns" {

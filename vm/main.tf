@@ -1,11 +1,7 @@
-data "proxmox_virtual_environment_node" "px" {
-  node_name = "px"
-}
-
 resource "proxmox_virtual_environment_vm" "this" {
   name        = var.name
 
-  node_name = var.name
+  node_name = var.node_name
   started = true
 
   cpu {

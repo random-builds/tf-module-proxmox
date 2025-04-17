@@ -1,3 +1,6 @@
+variable "node_name" {
+  type = string
+}
 variable "name" {
   type = string
 }
